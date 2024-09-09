@@ -1,17 +1,9 @@
-import dj_database_url
-from decouple import config
-
-DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
-}
-
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', cast=bool)
-
-from decouple import config
-
-
-
-ALLOWED_HOSTS = ['render-deployment-7e5n.onrender.com', 'localhost' , '127.0.0.1']
+asgiref==3.8.1
+dj-database-url==2.2.0
+Django==5.1.1
+psycopg2-binary==2.9.9
+python-decouple==3.8
+sqlparse==0.5.1
+typing_extensions==4.12.2
+tzdata==2024.1
+gunicorn==20.1.0
