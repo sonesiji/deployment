@@ -1,0 +1,17 @@
+import dj_database_url
+from decouple import config
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
+}
+
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', cast=bool)
+
+from decouple import config
+
+
+
+ALLOWED_HOSTS = ['render-deployment-7e5n.onrender.com', 'localhost' , '127.0.0.1']
